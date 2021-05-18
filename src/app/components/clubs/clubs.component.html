@@ -1,0 +1,39 @@
+<div class="tabs-content" id="clubs">
+  <div class="container">
+    <div class="row">
+      <div class="wrapper">
+        <div class="col-md-4">
+          <div class="section-heading">
+            <div class="icon">
+              <img src="assets/img/kidsclub.png" alt="">
+            </div>
+            <h4>  Welcome  </h4>
+
+            <div class="line-dec"></div>
+            <p>To help children to integrate more socially and help them develop their skills while enjoying their time.</p>
+            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+              <li><a href="#tab1" class="active">Show All Clubs</a></li>
+              <li><a href="#tab2" >search clubs </a></li>
+              <li><a href="#tab3">The most viewed clubs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <section id="first-tab-group" class="tabgroup">
+            <div *ngFor="let club of clubs" id="tab1">
+              <div class="text-content">
+                <span><label>Club name: {{club.club_Name}} </label></span> <br>
+                <span><a href="#"><label>Club number: {{club.club_Id}}</label> </a> <br><label>Club type: {{club.club_type}}</label></span>
+                <p><label>Description: </label><br>{{club.club_Description}}</p>
+              </div>
+              <div >
+              </div>
+            </div>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

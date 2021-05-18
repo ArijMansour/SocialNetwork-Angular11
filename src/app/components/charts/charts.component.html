@@ -1,0 +1,18 @@
+<p>chartWorks</p>
+<div class="chart-wrapper" id="el1">
+  <canvas baseChart 
+  [data]="doughnutChartData"
+  [labels]="doughnutChartLabels"
+  [chartType]="doughnutChartType">
+</canvas>
+<canvas baseChart 
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType">
+  </canvas>
+</div>
+
+

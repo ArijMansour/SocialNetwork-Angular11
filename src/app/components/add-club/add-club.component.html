@@ -1,0 +1,51 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+  <h1></h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <fieldset>
+          <legend style="font-family:verdana;" class="text-center">You can add your new club . <span class="req"><br><small>{{message_n}}{{isaddedclub}}
+                                </small></span></legend>
+
+          <div class="form-group">
+            <label for="club_Name"><span class="req">* </span> Name: <small>This is your club name</small> </label>
+            <input required type="text" [(ngModel)]="club.club_Name" name="club_Name" id="club_Name"
+                   class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+          </div>
+
+          <div class="form-group">
+            <label for="club_Description"><span class="req">* </span>Type club : <small>What is your type club</small></label>
+            <select id="select" class="form-control" type="text" [(ngModel)]="club.club_type" name="club_type"  required placeholder="Enter the type of club" >
+              <option>MUSICAL</option>
+              <option>COMEDY</option>
+              <option>EDUCATIF</option>
+              <option>SPORTS</option>
+              <option>TECHNOLOGIE</option>
+              <option>OTHER</option>
+            </select>
+            <div id="errFirst"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="club_Description"><span class="req">* </span> Description : <small>You can explain more about the club</small></label>
+            <input  class="form-control"[(ngModel)]="club.club_Description" name="club_Description"
+                    id="club_Description" placeholder="You can describe more here" />
+            <div class="status" id="status"></div>
+          </div>
+          <div class="form-group">
+            <input class="btn btn-success" type="submit" name="submit_reg" value="Add your club" (click)="ajouterclNow()">
+          </div>
+        </fieldset>
+      </form><!-- ends ajoutercl form -->
+      <!-- second for to fiter club-->
+    </div><!-- ends col-6 -->
+
+  </div>
+</div>

@@ -1,0 +1,455 @@
+<!--<div class="container-fluid mt-100">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="active-member">
+                        <div class="table-responsive">
+                            <table class="table table-xs mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Notification_Id</th>
+                                        <th>receiver</th>
+                                        <th>Notification_Type</th>
+                                        <th>Notification_Text</th>
+                                        <th>Date</th>
+                                        <th>Image</th>
+                                        <th>edit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    
+                                    <tr *ngFor="let n of notifications" >
+                                        <td> {{n.notification_Id}} </td>
+                                        <td> {{n.receiver}} </td>
+                                        <td> {{n.notification_Type}} </td>
+                                        <td>{{n.notification_Text}} </td>
+                                        <td>{{n.date}} </td>
+                                        <td>{{n.imageUrl}}</td>
+                                        <td> <button type="button" class="btn btn-primary" (click)="deleterow(n.notification_Id)">Delete</button>&nbsp;&nbsp;</td>
+                                   
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <button type="button" class="btn btn-danger" >Update</button>
+            <button type="button"  (click)="showadd()" class="btn btn-success">Add new Notification</button>
+            <button type="button" class="btn btn-primary btn-lg" id="boutton" (click)="hideadd()"><mat-icon>done_outline</mat-icon></button>
+<div *ngIf="show" >
+    
+    <div class="container"> >
+     </div>-->
+             <!--adding a department with success notification-->
+  <!--    <div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong></strong> department added with success !
+            <button (click)="closealert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>-->
+                               <!--end notification-->
+  <!-- <form  #F="ngForm"  action="#">
+            <div class="field">-->  
+            
+
+                <!--
+            
+            <input type="text" required placeholder="Title Of Department" #t="ngModel" id="titleDepartment" name="titleDepartment" [(ngModel)]="notification.notification_Id">
+            <div class="alert alert-danger" *ngIf="t.invalid && t.touched" >
+            <div *ngIf="t.errors.required">Title Is Obilgatory</div>
+            <div *ngIf="t.errors.minlength">Invalid Title</div>
+            </div>
+            
+            </div>
+            
+            <div class="field">
+            
+            <label></label>
+            <input type="text" required placeholder="typeNotification"  #d="ngModel"  id="typeNotification" name="typeNotification" [(ngModel)]="notification.notification_Type">
+            <div class="alert alert-danger" *ngIf="d.invalid && d.touched" >
+            <div *ngIf="d.errors.required">Description Is Obilgatory</div>
+            <div *ngIf="d.errors.minlength">Invalid Description</div>
+            </div>
+            </div>
+            
+            <div class="field">
+            
+            <label></label>
+            <input type="number" required placeholder="NotificationReceiver" #q="ngModel" pattern="[1-9][0-9]" name="NotificationReceiver"[(ngModel)]="notification.receiver">
+            <div class="alert alert-danger" *ngIf="q.invalid && q.touched" >
+            <div *ngIf="q.errors.required">Quantity Is Obilgatory</div>
+            <div *ngIf="q.errors.minlength">Invalid Quantity</div>
+            </div>
+            
+            </div>
+ 
+            <label></label>
+            <div class="field">
+            
+            <button type="button" class="btn btn-danger" (click)="addNotification()" >Add Notification</button> 
+            </div>
+           
+
+     <div *ngIf="show1">-->
+
+      
+     
+<!--  <img src="../assets/img/back2.png">  -->
+    
+      
+  
+
+
+
+<!-- INTERFACE D'ADMINSITRATEUR -->
+<div class   ="card mt-5" id="k" style="padding: 20px;">
+  <h1>Notification Dashboard </h1>
+  <div class="card mt-5" >
+
+
+  <body>
+      <div class="container">
+          <div class="row">
+      
+          <button type="button" (click)="Viewdepartment()" id="submitButton" class="buttony">Show List Of Notification </button>
+          <button type="button" (click)="AddDepatmentshowdiv()"  id="submitButton" class="buttony">ADD NEW Notification</button>
+          <button type="button" (click)="hideadd()"  id="submitButton" class="buttony">Exit Notification Operation</button>
+          <button type="button" (click)="viewstat()"  id="submitButton" class="buttony">Notification Stats</button>
+         <!-- adding a new department-->
+         
+         </div>
+
+   
+
+         
+
+
+      </div>
+      
+         
+
+
+         <!--add dep-->
+         
+         <div class="wrapper">
+          <div *ngIf="show">
+         <div class="title">
+         
+         ADD New Notification</div>
+          <!--adding a department with success notification
+         <div *ngIf="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+         <strong></strong> department added with success !
+         <button (click)="closealert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+         </button>
+         </div>-->
+                            <!--end notification-->
+         
+         <form  #F="ngForm"  action="#">
+         <div class="field">
+         
+         
+         <input type="text" required placeholder=" NotificationName" #t="ngModel" id="titleDepartment" name="titleDepartment" [(ngModel)]="notification.notification_Name">
+        
+         </div>
+
+         
+         <div class="field">
+         
+         <label></label>
+         <input type="text" required placeholder="NotificationText" #q="ngModel"  name="capacityDepartment"[(ngModel)]="notification.notification_Text">
+         <div class="alert alert-danger" *ngIf="q.invalid && q.touched" >
+        
+         </div>
+         
+         </div>
+
+         <div class="field">
+         
+          <label></label>
+          <input type="text" required placeholder="NotificationType" #q="ngModel"  name="capacityDepartment"[(ngModel)]="notification.notification_Type">
+          <div class="alert alert-danger" *ngIf="q.invalid && q.touched" >
+         
+          </div>
+          
+          </div>
+ 
+          <div class="field">
+         
+            
+            <input type="text" required placeholder="NotificationReceiver" #q="ngModel"  name="capacityDepartment"[(ngModel)]="notification.person">
+            <div class="alert alert-danger" *ngIf="q.invalid && q.touched" >
+           
+            </div>
+            
+            </div>
+
+
+         <label></label>
+ <!-- <input type="file"  name="file"[(ngModel)]="notification.fileName"> <label>Notif photo</label><br> --> 
+
+         
+ <div class="field">
+         
+ 
+  <input type="text" required placeholder="NotificationImage" #q="ngModel"  name="image"[(ngModel)]="notification.imageUrl">
+  </div>
+  <img [src]="url" height="200"><br>
+  <input type="file"  (change)="onselectFile($event)" name="image"[(ngModel)]="notification.imageUrl">
+  
+         
+         
+         
+         
+         <div class="field">
+         <button type="button" [disabled]="F.invalid" id="adddepartment" (click)="addNotification()" class="btn btn-success">Add Notification</button>
+         
+         </div>
+         
+         
+         </form>
+     
+         </div>
+         
+         
+
+<!-- update  department-->
+
+
+<div *ngIf="updatedepInt" class="container" style="padding-top: 100;">
+  <div class="wrapper">
+
+
+
+<div class="title">
+         
+  UPDATE Notification</div>
+
+  <form #H="ngForm">
+    <fieldset>
+      <div class="field">
+        
+        <input type="text" required placeholder="NotificationName" #t="ngModel" id="titleProduct" name="titleProduct"
+          [(ngModel)]="notifToUpdate.notification_Name">
+        <!-- <div class="alert alert-danger" *ngIf="t.invalid && t.touched" >
+        <div *ngIf="t.errors.required">Title Is Obilgatory</div>
+    </div> -->
+
+      </div>
+
+      <div class="field">
+      
+        <input type="text" required placeholder="NotificationType" #d="ngModel" id="descriptionProduct1"
+          name="descriptionProduct1" [(ngModel)]="notifToUpdate.notification_Type">
+        <!-- <div class="alert alert-danger" *ngIf="d.invalid && d.touched" >
+        <div *ngIf="d.errors.required">Description Is Obilgatory</div>
+        <div *ngIf="d.errors.minlength">Invalid Description</div>
+    </div> -->
+      </div>
+
+      <div class="field">
+      
+        <input type="text" required placeholder="NotificationText" #d="ngModel" id="descriptionProduct2"
+          name="descriptionProduct2" [(ngModel)]="notifToUpdate.notification_Text">
+        <!-- <div class="alert alert-danger" *ngIf="d.invalid && d.touched" >
+        <div *ngIf="d.errors.required">Description Is Obilgatory</div>
+        <div *ngIf="d.errors.minlength">Invalid Description</div>
+    </div> -->
+      </div>
+
+
+      <div class="field">
+      
+        <input type="text" required placeholder="NotificationReceiver" #d="ngModel" id="descriptionProduct3"
+          name="descriptionProduct3" [(ngModel)]="notifToUpdate.person">
+        <!-- <div class="alert alert-danger" *ngIf="d.invalid && d.touched" >
+        <div *ngIf="d.errors.required">Description Is Obilgatory</div>
+        <div *ngIf="d.errors.minlength">Invalid Description</div>
+    </div> -->
+      </div>
+
+
+
+
+
+
+
+      <div class="field">
+      
+        <input type="text" required placeholder="NotificationImage" #q="ngModel" 
+          name="quantityProduct" [(ngModel)]="notifToUpdate.imageURL">
+        <!-- <div class="alert alert-danger" *ngIf="q.invalid && q.touched" >
+        <div *ngIf="q.errors.required">Quantity Is Obilgatory</div>
+        <div *ngIf="q.errors.minlength">Invalid Quantity</div>
+    </div> -->
+    
+      </div>
+      <img [src]="url" height="200"><br>
+      <input type="file" (change)="onselectFile($event)" name="image"[(ngModel)]="notifToUpdate.imageUrl">
+
+
+      <div class="field">
+      <button type="button" id="adddepartment" (click)="updatenotif(notifToUpdate.notification_Id, notifToUpdate)"
+        class="btn btn-success">Update
+        Notification</button>
+      </div>
+    </fieldset>
+  </form>
+  <br>
+
+
+</div>
+
+
+
+
+
+
+
+  </div>
+  
+
+
+
+
+
+
+         </div>
+  
+
+
+
+
+      
+
+
+
+
+
+
+<div *ngIf="showdepartments">
+
+
+
+  
+
+
+<!-- AFFICHAGE DES Notifications AVEC OPTION DELETE-->
+
+<div class="input-group rounded">
+  <input type="search" [(ngModel)]="NotificationType" (input)="search()"    class="form-control rounded" placeholder="Search by Name" aria-label="Search"
+    aria-describedby="search-addon" />
+   
+  
+  <span class="input-group-text border-0" id="search-addon">
+    <i class="fas fa-search"></i>
+  </span>
+</div>
+
+<div   >
+
+
+
+
+<table class="styled-table">
+<thead>
+<tr>
+<th>Notififcation Id</th>
+<th>Notififcation Name</th>
+<th>Notification Type</th>
+<th>Notification Text</th>
+<th>Notification Receiver</th>
+<th>Notification Image</th>
+<th>Reception Number</th>
+<th>Edit</th>
+
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let d of notifications">
+<td><h6 class="card-title">{{d.notification_Id}}</h6></td>
+<td><h6 class="card-title">{{d.notification_Name}}</h6></td>
+<td><h6 class="cartd-title">{{d.notification_Type}}</h6></td>
+<td><h6 class="cartd-title">{{d.notification_Text}}</h6></td>
+<td><h6 class="cartd-title">{{d.person}}</h6></td>
+<td><h6 class="cartd-title">{{d.imageUrl}}</h6></td>
+<td><h6 class="cartd-title">{{d.receiver}}</h6></td>
+
+<td>
+  <div class="field">
+
+    
+      <button (click)="updatedepInterface(d.notification_Id,d)" class="btn btn-info" style="margin-left: 10px"   type="button" >     Update </button>
+
+      <button (click)="deleteDepartment(d.notification_Id)" class="btn btn-danger" style="margin-left: 10px"   type="button" > DELETE </button>
+      
+      </div>
+</td>
+
+
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<!--- Stats-->
+
+<div *ngIf="showStats">
+  <table class="styled-table">
+     <thead>
+     <tr>
+         <th><button (click)="getNotificationstat()" class="btn btn-success w-100" style="margin-right: 5px"   type="button" > Show Notification Number</button></th>
+
+</tr>
+</thead>
+<tbody>
+ 
+     <td><h6 class="card-title">{{nbr}}</h6></td>
+     
+     
+     <td>
+       <div class="field">
+         
+     
+       </div>
+              
+      
+
+
+          
+     </td>
+  
+
+</tbody>
+
+</table>    
+
+</div>
+
+
+
+
+</body>

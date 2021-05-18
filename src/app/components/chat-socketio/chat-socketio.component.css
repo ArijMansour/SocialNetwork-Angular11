@@ -1,0 +1,24 @@
+.chat {
+    margin-top: 10rem;
+}
+
+div.chat-content {
+    border-radius: .25rem;
+    height: 40rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    height: 100%;
+}
+
+.body {
+    background: rgba(10, 10, 10, 0.3)
+}
+
+
+#k{
+
+colour : rgba(8, 46, 172, 0.3)
+
+}

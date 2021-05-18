@@ -1,0 +1,73 @@
+<div class="tabs-content" id="clubs">
+  <div class="container">
+    <div class="row">
+      <div class="wrapper">
+        <div class="col-md-4">
+          <div class="section-heading">
+            <div class="icon">
+              <img src="assets/img/kidsclub.png" alt="">
+            </div>
+            <h4>  Welcome  </h4>
+
+            <div class="line-dec"></div>
+            <p>To help children to integrate more socially and help them develop their skills while enjoying their time.</p>
+            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+              <li><a class="active">Show All Clubs</a></li>
+              <li><a>search clubs </a></li>
+              <li><a>The most viewed clubs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <section id="first-tab-group" class="tabgroup">
+            <div>
+              <br>
+              <br>
+
+            </div>
+             <label>{{succesdelete}}</label>
+            <form>
+              <fieldset>
+                <legend class="text-center"><h3>home clubs</h3><span class="req"><br><small>
+                                </small></span></legend>
+                <div *ngFor="let club of clubs">
+
+                  <div id="brdr">
+                  <div class="form-group">
+                    <h4> N°: {{club.club_Id}}</h4>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <h4 id="loun_sous-titre"> Name: </h4><h4>{{club.club_Name}}</h4>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <h4 id="loun_sous-titre">Type club: </h4><h4>{{club.club_type}}</h4>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <h4 id="loun_sous-titre">Description: </h4><h4>{{club.club_Description}}</h4>
+                  </div>
+                  <br>
+                  <div id="brdr">
+                    <button class="btn btn-danger btn-xs" (click)="supprimerClub(club.club_Id)">Delete</button>
+                    <button class="btn btn-danger btn-xs" routerLink="modify_club" >Delete</button>
+                </div>
+                    <div>  <router-outlet></router-outlet></div>
+                </div>
+                  <br>
+                  <br>
+                </div>
+
+              </fieldset>
+            </form><!-- ends ajoutercl form -->
+          </section>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
