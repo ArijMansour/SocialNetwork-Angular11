@@ -3,5 +3,6 @@
         "Rawdhty",
         "chartjsangular",
         "flexbox"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
