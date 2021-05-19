@@ -22,8 +22,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ActivityComponent } from './components/activity/activity.component';
 import { NotificationComponent } from './components/notification/notification.component';
 
-import { KinderOwnerSpaceComponent } from './kinder-owner-space/kinder-owner-space.component';
-import { ManagePostsComponent } from './manage-posts/manage-posts.component';
+import { SpaceKinderOwnerComponent } from './components/space-kinder-owner/space-kinder-owner.component';
+import { SListPostsComponent } from './components/s-list-posts/s-list-posts.component';
 
 
 const routes: Routes = [{path:'',component:HomeComponent} ,
@@ -63,9 +63,11 @@ redirectTo: '/'
 
 
 {path:'sign-in',component:LoginComponent} ,
-{path:'kindergartenOwner' , component: KinderOwnerSpaceComponent , children:[
-  {path:'managePosts' , component: ManagePostsComponent},   
+{path:'spaceKinderOwner' , component:SpaceKinderOwnerComponent , children:[
+  {path:'listPosts' , component : SListPostsComponent}
 ]},
+    
+
 
   
    {path:'parent_space',component:ParentSpaceComponent,

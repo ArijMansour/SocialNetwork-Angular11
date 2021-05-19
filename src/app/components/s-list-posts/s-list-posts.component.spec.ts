@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManagePostsComponent } from './manage-posts.component';
+import { SListPostsComponent } from './s-list-posts.component';
 
-describe('ManagePostsComponent', () => {
-  let component: ManagePostsComponent;
-  let fixture: ComponentFixture<ManagePostsComponent>;
+describe('SListPostsComponent', () => {
+  let component: SListPostsComponent;
+  let fixture: ComponentFixture<SListPostsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ManagePostsComponent ]
+      declarations: [ SListPostsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ManagePostsComponent);
+    fixture = TestBed.createComponent(SListPostsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
