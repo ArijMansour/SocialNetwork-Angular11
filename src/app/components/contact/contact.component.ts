@@ -18,4 +18,9 @@ export class ContactComponent implements OnInit {
     this.router.navigate(['chatbot'] , {relativeTo:this.route} ) ;
   }
 
+  showmail() {
+    this.router.navigate(['mail'] , {relativeTo:this.route} ) ;
+  }
+
+
 }

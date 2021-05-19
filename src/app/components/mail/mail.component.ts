@@ -11,5 +11,6 @@ export class MailComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }

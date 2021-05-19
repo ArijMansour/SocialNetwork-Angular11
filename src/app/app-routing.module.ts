@@ -26,7 +26,9 @@ import { SpaceKinderOwnerComponent } from './components/space-kinder-owner/space
 import { SListPostsComponent } from './components/s-list-posts/s-list-posts.component';
 
 
-const routes: Routes = [{path:'',component:HomeComponent} ,
+const routes: Routes = [{path:'home',component:HomeComponent , children:[{
+path:'mail' , component:MailComponent
+}]} ,
 {path:'kindergardens',component:PortfolioComponent} ,
 {path:'more',component:AboutComponent, children:[{path:'clubs',component:ClubsComponent}]} ,
 {path:'stats',component:StatsComponent } ,

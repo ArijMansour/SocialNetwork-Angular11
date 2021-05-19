@@ -69,8 +69,13 @@ import { HttpClientModule } from '@angular/common/http';
 import {  ReactiveFormsModule } from '@angular/forms';  
 import { ActivityService } from './components/activity/activity.service';
 import { ChatSocketioComponent } from './components/chat-socketio/chat-socketio.component';
+
 import { SpaceKinderOwnerComponent } from './components/space-kinder-owner/space-kinder-owner.component';
 import { SListPostsComponent } from './components/s-list-posts/s-list-posts.component';
+
+
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+ 
 
 @NgModule({
   declarations: [
@@ -122,7 +127,7 @@ import { SListPostsComponent } from './components/s-list-posts/s-list-posts.comp
     ChartsModule ,
     NbThemeModule.forRoot(),
     NbChatModule ,
- 
+    NgxChartsModule ,
    
     BrowserAnimationsModule ,
     MatToolbarModule ,

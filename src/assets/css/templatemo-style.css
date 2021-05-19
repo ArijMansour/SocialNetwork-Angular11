@@ -250,15 +250,15 @@ p {
 	content: '\F0416';
 }
 
-#kidsClub {
-  background-color: rgb(0, 0, 0);
+#kidsClub {  
+  background-color: rgb(40, 27, 233);
 }
 
 
 #clubs {
 
-  background-image: url(../img/anouer.png);
-  background-color: rgb(247, 197, 82);
+  background-image: url(../img/version_club.png);
+  background-color: rgb(221, 100, 19);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -297,8 +297,8 @@ p {
 }
 
 #about {
-	padding: 150px 0px;
-	background-image: url(../img/kedo3.jpg);
+	padding: 200px 0px;
+	background-image: url(../img/child.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -324,7 +324,7 @@ p {
 	margin-top: 45px;
 	font-size: 17px;
 	font-weight: 500;
-	color: #fff;
+	color: rgb(12, 11, 11);
 	letter-spacing: 1px;
 }
 
@@ -335,7 +335,7 @@ p {
 }
 
 #about .service-item p {
-	color: #fff;
+	color: rgb(0, 0, 0);
 	margin-top: 30px;
 }
 
@@ -580,7 +580,7 @@ p {
 }
 
 #contact-us {
-	background-color: #596065;
+	background-color: #d1c6b9;
 	text-align: center;
 	padding: 80px 0px;
 }
@@ -602,7 +602,7 @@ p {
 }
 
 #contact-us .section-heading p {
-	color: #fff;
+	color: rgb(228, 154, 69);
 	padding: 0px 33%;
 }
 
