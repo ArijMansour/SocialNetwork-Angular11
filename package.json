@@ -25,6 +25,7 @@
     "@nebular/eva-icons": "^7.0.0",
     "@nebular/theme": "^7.0.0",
     "@ng-bootstrap/ng-bootstrap": "^9.1.0",
+    "@swimlane/ngx-charts": "^18.0.1",
     "angular-calendar": "^0.28.24",
     "bootstrap": "^4.5.0",
     "bootswatch": "^4.6.0",

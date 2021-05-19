@@ -69,7 +69,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {  ReactiveFormsModule } from '@angular/forms';  
 import { ActivityService } from './components/activity/activity.service';
 import { ChatSocketioComponent } from './components/chat-socketio/chat-socketio.component';
-
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -116,7 +117,7 @@ import { ChatSocketioComponent } from './components/chat-socketio/chat-socketio.
     ChartsModule ,
     NbThemeModule.forRoot(),
     NbChatModule ,
- 
+    NgxChartsModule ,
    
     BrowserAnimationsModule ,
     MatToolbarModule ,

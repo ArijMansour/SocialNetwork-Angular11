@@ -1,10 +1,11 @@
-<p>chartWorks</p>
-<div class="chart-wrapper" id="el1">
+<!--
+  <div class="chart-wrapper" id="el1">
   <canvas baseChart 
   [data]="doughnutChartData"
   [labels]="doughnutChartLabels"
   [chartType]="doughnutChartType">
 </canvas>
+
 <canvas baseChart 
     [datasets]="barChartData"
     [labels]="barChartLabels"
@@ -16,3 +17,130 @@
 </div>
 
 
+--> 
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row justify-content-center">
+      <div class="col-xl-8 col-lg-9 col-md-10 col-12 text-center mb-5">
+          <div class="card">
+              <div class="cirle-img"> <img src="https://i.imgur.com/IRsUTtE.jpg">
+                  <div class="rating-on-img">
+                      <h3 class="head-rate">3.7</h3>
+                      <h3 class="subhead-rate">out of 5</h3>
+                  </div>
+              </div>
+              <div class="heading0 mb-3 text-center">
+                  <h2>Reviews, by real people
+                      <h1>Rate Us</h1>
+                  </h2>
+                 
+<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+</div>
+              </div>
+              <div class="container">
+                <div class="row mt-20">
+                    <div class="col-md-12">
+                        <div class="progress skill-bar ">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 5 Star <i class="val">25 reviews</i></span> </div>
+                        </div>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 4 star<i class="val">3 reviews</i></span> </div>
+                        </div>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 3 star<i class="val">34 reviews</i></span> </div>
+                        </div>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 2 star<i class="val">1 review</i></span> </div>
+                        </div>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 1 star<i class="val">10 reviews</i></span> </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+        <!--  <div class="rating-bar0 justify-content-center">
+                  <table class="text-left mx-auto">
+                      <tr>
+                          <td class="rating-label">Excellent</td>
+                          <td class="rating-bar">
+                              <div class="bar-container">
+                                  <div class="bar-5"></div>
+                              </div>
+                          </td>
+                          <td>123</td>
+                      </tr>
+                      <tr>
+                          <td class="rating-label">Good</td>
+                          <td class="rating-bar">
+                              <div class="bar-container">
+                                  <div class="bar-4"></div>
+                              </div>
+                          </td>
+                          <td>23</td>
+                      </tr>
+                      <tr>
+                          <td class="rating-label">Average</td>
+                          <td class="rating-bar">
+                              <div class="bar-container">
+                                  <div class="bar-3"></div>
+                              </div>
+                          </td>
+                          <td>10</td>
+                      </tr>
+                      <tr>
+                          <td class="rating-label">Poor</td>
+                          <td class="rating-bar">
+                              <div class="bar-container">
+                                  <div class="bar-2"></div>
+                              </div>
+                          </td>
+                          <td>3</td>
+                      </tr>
+                      <tr>
+                          <td class="rating-label">Brutal</td>
+                          <td class="rating-bar">
+                              <div class="bar-container">
+                                  <div class="bar-1"></div>
+                              </div>
+                          </td>
+                          <td>0</td>
+                      </tr>
+                  </table>
+              </div>-->    
+              <div> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> </div>
+              <div class="review-head"> <a href="#">
+                      <h3 class="review-heading">I was Strugling to find an adequate kindergarten to my child !</h3>
+                  </a> </div>
+              <div class="review-body">
+                  <p class="review-desc">I think this app is the best I could easily find a kindergarten for my child thanks Rawdhty.Tn</p> <a href="#">
+                      <h5 class="author">Myriam, Ariana</h5>
+                  </a>
+                  <p class="review-date">September 26, 2021</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!--<div class="container">
+  <div class="row mt-20">
+      <div class="col-md-12">
+          <div class="progress skill-bar ">
+              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 5 Star <i class="val">25 reviews</i></span> </div>
+          </div>
+          <div class="progress skill-bar">
+              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 4 star<i class="val">3 reviews</i></span> </div>
+          </div>
+          <div class="progress skill-bar">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 3 star<i class="val">34 reviews</i></span> </div>
+          </div>
+          <div class="progress skill-bar">
+              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 2 star<i class="val">1 review</i></span> </div>
+          </div>
+          <div class="progress skill-bar">
+              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"> <span class="skill"><i class="fa fa-star"></i> 1 star<i class="val">10 reviews</i></span> </div>
+          </div>
+      </div>
+  </div>
+</div>-->
