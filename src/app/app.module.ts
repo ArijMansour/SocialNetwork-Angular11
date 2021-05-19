@@ -10,7 +10,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {RouterModule,ROUTES} from '@angular/router';
+import {RouterModule } from '@angular/router';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { ChartsComponent } from './components/charts/charts.component';
@@ -69,8 +69,14 @@ import { HttpClientModule } from '@angular/common/http';
 import {  ReactiveFormsModule } from '@angular/forms';  
 import { ActivityService } from './components/activity/activity.service';
 import { ChatSocketioComponent } from './components/chat-socketio/chat-socketio.component';
+
+import { SpaceKinderOwnerComponent } from './components/space-kinder-owner/space-kinder-owner.component';
+import { SListPostsComponent } from './components/s-list-posts/s-list-posts.component';
+
+
 import { NgxChartsModule } from '@swimlane/ngx-charts';
  
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -97,7 +103,11 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     DashboardComponent,
     ActivityComponent,
     NotificationComponent,
-    ChatSocketioComponent ,
+    ChatSocketioComponent,
+    SpaceKinderOwnerComponent,
+    SListPostsComponent,
+    
+    
 
 
 

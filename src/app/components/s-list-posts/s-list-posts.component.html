@@ -1,0 +1,265 @@
+<!-- INTERFACE D'ADMINSITRATEUR -->
+<div class="card mt-5" id="k" style="padding: 20px;">
+    <h1>Posts Settings : </h1>
+    <div class="card mt-5">
+
+
+        <body>
+            <div class="container">
+                <div class="row">
+
+                    <button type="button" (click)="Viewdepartment()" id="submitButton" class="buttony">Show List Of
+                        Posts </button>&nbsp;&nbsp;
+                    <button type="button" (click)="AddDepatmentshowdiv()" id="submitButton" class="buttony">ADD NEW
+                        Post</button>&nbsp;&nbsp;
+                    <button type="button" (click)="hideadd()" id="submitButton" class="buttony">Exit List</button>
+                </div>
+            </div>
+            <!--add dep-->
+
+            <div class="wrapper">
+                <div *ngIf="show">
+                    <div class="title">ADD New Post</div>
+                    <!--end Post-->
+
+                    <form #F="ngForm" action="#">
+                        <div class="field">
+
+
+                            <input type="text" required placeholder=" PostTitle" #t="ngModel" id="titleDepartment"
+                                name="titleDepartment" [(ngModel)]="post.post_Title">
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label></label>
+                            <input type="text" required placeholder="PostText" #q="ngModel" name="capacityDepartment"
+                                [(ngModel)]="post.post_Description">
+                            <div class="alert alert-danger" *ngIf="q.invalid && q.touched">
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="field">
+                            <button type="button" [disabled]="F.invalid" id="adddepartment" (click)="addPosts() "
+                                class="btn btn-success">Add Post</button>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- update  department-->
+
+
+                <div *ngIf="updatedepInt" class="container" style="padding-top: 100;">
+                    <div class="wrapper">
+
+
+
+                        <div class="title">UPDATE Post</div>
+
+                        <form #H="ngForm">
+                            <fieldset>
+                                <div class="field">
+
+                                    <input type="text" required placeholder="your post Title" #t="ngModel"
+                                        id="titleProduct" name="titleProduct" [(ngModel)]="postToUpdate.post_Title">
+                                    <!-- <div class="alert alert-danger" *ngIf="t.invalid && t.touched" >
+          <div *ngIf="t.errors.required">Title Is Obilgatory</div>
+      </div> -->
+
+                                </div>
+
+                                <div class="field">
+
+                                    <input type="text" required placeholder="Post Description" #d="ngModel"
+                                        id="descriptionPost" name="descriptionPost"
+                                        [(ngModel)]="postToUpdate.post_Description">
+                                    <!-- <div class="alert alert-danger" *ngIf="d.invalid && d.touched" >
+          <div *ngIf="d.errors.required">Description Is Obilgatory</div>
+          <div *ngIf="d.errors.minlength">Invalid Description</div>
+      </div> -->
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <!-- <div class="alert alert-danger" *ngIf="q.invalid && q.touched" >
+          <div *ngIf="q.errors.required">Quantity Is Obilgatory</div>
+          <div *ngIf="q.errors.minlength">Invalid Quantity</div>
+      </div> -->
+
+
+
+
+
+                                <div class="field">
+                                    <button type="button" id="adddepartment"
+                                        (click)="updatepost(postToUpdate.post_Id, postToUpdate)"
+                                        class="btn btn-success">UpdatePost</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <br>
+
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div *ngIf="showdepartments">
+
+
+
+
+
+
+                <!-- AFFICHAGE DES Posts AVEC OPTION DELETE-->
+
+                <div class="input-group rounded">
+                    <input type="search" [(ngModel)]="PostType" (input)="search()" class="form-control rounded"
+                        placeholder="Search by Title" aria-label="Search" aria-describedby="search-addon" />
+
+
+                    <span class="input-group-text border-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+
+                <div class="container">
+
+
+
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Post Id</th>
+                                <th>Post Title</th>
+                                <th>Post Date</th>
+                                <th>Post Description</th>
+                                <th>Edit</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let d of posts">
+                                <td>
+                                    <h6 class="card-title">{{d.post_Id}}</h6>
+                                </td>
+                                <td>
+                                    <h6 class="card-title">{{d.post_Title}}</h6>
+                                </td>
+                                <td>
+                                    <h6 class="cartd-title">{{d.post_Date}}</h6>
+                                </td>
+                                <td>
+                                    <h6 class="cartd-title">{{d.post_Description}}</h6>
+                                </td>
+
+
+                                <td>
+                                    <div class="field">
+
+
+                                        <button (click)="updatedepInterface(d.post_Id,d)" class="btn btn-info"
+                                            style="margin-left: 10px" type="button"> Update </button>
+
+                                        <button (click)="deleteDepartment(d.post_Id)" class="btn btn-danger"
+                                            style="margin-left: 10px" type="button"> DELETE </button>
+
+                                    </div>
+                                </td>
+
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+
+                    </div>
+            </div>
+
+
+
+            
+        <!--
+<h1>Posts Dashboard : </h1>
+<hr>
+<hr>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Post id</th>
+            <th>Post Title</th>
+            <th>Post Date</th>
+            <th>Post Description</th>
+            <th>Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of posts ">
+            <td>{{p.post_Id}}</td>
+            <td>{{p.post_Title}}</td>
+            <td>{{p.post_Date}}</td>
+            <td>{{p.post_Description}}</td>
+
+            <td>
+                <button type="button" class="btn btn-primary">Delete</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger">Update</button>
+            </td>
+
+            
+            
+        </tr>
+    </tbody>
+    
+
+    </table>-->
